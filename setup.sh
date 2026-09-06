@@ -29,8 +29,8 @@ sudo bash -c 'cat > /etc/nginx/sites-available/svetoviz << "EOF"
 limit_req_zone \$binary_remote_addr zone=svetoviz_limit:10m rate=10r/s;
 
 server {
-    listen 8080;
-    
+    listen 80;
+
     # Accept requests matching your domain wildcard and cloudflare domains
     server_name .svetoviz.com .cloudflare.com;
 
